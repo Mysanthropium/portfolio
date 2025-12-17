@@ -1,1 +1,47 @@
 /* Custom overrides */
+/* Main colors */
+:root {
+    --color-primary: #0d6efd;   /* blå */
+    --color-secondary: #6610f2; /* lila */
+    --color-bg: #215ab1;        /* nästan svart */
+    --color-text: #f8f9fa;      /* ljus text */
+    --color-muted: #adb5bd;     /* grå */
+}
+
+/* Body and text */
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+/* Navbar */
+#mainNav {
+    background-color: var(--color-bg);
+}
+
+.navbar-brand {
+    color: var(--color-text);
+}
+
+.navbar-brand:hover {
+    color: var(--color-primary);
+}
+
+/* Links and buttons */
+a {
+    color: var(--color-primary);
+}
+
+a:hover {
+    color: var(--color-secondary);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}

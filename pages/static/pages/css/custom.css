@@ -1,47 +1,65 @@
 /* Custom overrides */
 /* Main colors */
 :root {
-    --color-primary: #0d6efd;   /* blå */
-    --color-secondary: #6610f2; /* lila */
-    --color-bg: #215ab1;        /* nästan svart */
-    --color-text: #f8f9fa;      /* ljus text */
-    --color-muted: #adb5bd;     /* grå */
+    --bg-main: #0b1220;
+    --bg-secondary: #0f172a;
+    --ice-primary: #38bdf8;
+    --ice-secondary: #0ea5e9;
+    --text-main: #e5e7eb;
+    --text-muted: #94a3b8;
+    --border-subtle: #1e293b;
 }
 
 /* Body and text */
 body {
-    background-color: var(--color-bg);
-    color: var(--color-text);
+    background-color: var(--bg-main);
+    color: var(--text-main);
 }
 
 /* Navbar */
 #mainNav {
-    background-color: var(--color-bg);
+    background-color: rgba(11, 18, 32, 0.9);
+    backdrop-filter: blur(10px);
 }
 
 .navbar-brand {
-    color: var(--color-text);
+    color: var(--ice-primary);
+    font-weight: 600;
 }
 
 .navbar-brand:hover {
-    color: var(--color-primary);
+    color: var(--ice-secondary);
 }
 
 /* Links and buttons */
 a {
-    color: var(--color-primary);
+    color: var(--ice-primary);
+    text-decoration: none;
 }
 
 a:hover {
-    color: var(--color-secondary);
+    color: var(--ice-secondary);
 }
 
 .btn-primary {
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
+    background-color: var(--ice-primary);
+    border-color: var(--ice-primary);
+    color: #020617;
+    font-weight: 500;
 }
 
 .btn-primary:hover {
-    background-color: var(--color-secondary);
-    border-color: var(--color-secondary);
+    background-color: var(--ice-secondary);
+    border-color: var(--ice-secondary);
+}
+
+/* Cards and sections */
+.card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-main);
+}
+
+.card-text {
+    color: var(--text-muted);
 }

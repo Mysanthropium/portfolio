@@ -127,6 +127,10 @@ hr {
     border-color: var(--border-subtle);
 }
 
+.btn {
+    --bs-btn-disabled-opacity: 0.85;
+}
+
 /* Cards and sections */
 .card {
     background-color: var(--bg-secondary);

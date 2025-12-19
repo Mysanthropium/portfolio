@@ -4,6 +4,7 @@
     --bg-main: #0b1220;
     --bg-secondary: #0f172a;
     --ice-primary: #38bdf8;
+    --ice-primary-rgb: 255, 105, 180;
     --ice-secondary: #0ea5e9;
     --text-main: #e5e7eb;
     --text-muted: #94a3b8;
@@ -27,9 +28,67 @@ header.masthead::before {
     );
 }
 
+/* hero styling */
 .hero-content {
     position: relative;
     z-index: 2;
+}
+
+/* projects styling */
+.projects-section {
+    background-color: var(--bg-secondary);
+}
+
+.section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-subtle);
+    border-radius: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 40px rgba(var(--ice-primary-rgb), 0.25);
+}
+
+.project-card .card-title {
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.project-card .card-text {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.project-tags .badge {
+    background-color: rgba(56, 189, 248, 0.15);
+    color: var(--ice-primary);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    margin-right: 0.4rem;
+    font-weight: 500;
+}
+
+.project-links .btn-primary {
+    background-color: var(--ice-primary);
+    border-color: var(--ice-primary);
+}
+
+.project-links .btn-primary:hover {
+    background-color: var(--ice-secondary);
+    border-color: var(--ice-secondary);
 }
 
 /* Body and text */
@@ -105,7 +164,7 @@ a:hover {
 }
 
 .hero-actions .btn-primary {
-    box-shadow: 0 0 0 rgba(56, 189, 248, 0);
+    box-shadow: 0 0 25px rgba(var(--ice-primary-rgb), 0.5);
     transition: all 0.2s ease;
 }
 
@@ -127,9 +186,6 @@ hr {
     border-color: var(--border-subtle);
 }
 
-.btn {
-    --bs-btn-disabled-opacity: 0.85;
-}
 
 /* Cards and sections */
 .card {
